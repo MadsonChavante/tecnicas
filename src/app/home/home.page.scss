@@ -1,34 +1,92 @@
 #painel{
-  height: 400px;
   width: 100%;
-  background-color: #fafafa;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.text-gradient {
+.text{
+  font-family: Google Sans,Helvetica,arial,sans-serif;
+    font-weight: bold;
+    line-height: 1.18;
+    font-size: 50px;
+    max-width: 500px;
+}
+.gradient {
   -webkit-background-clip: text;
   background-image: -webkit-linear-gradient(107deg,#9b0063,#ff4c1d);
   color: gradient-color-at(#9b0063,#ff4c1d);
   -webkit-text-fill-color: transparent;
-  font-family: Google Sans,Helvetica,arial,sans-serif;
-    font-weight: 400;
-    line-height: 1.18;
-    font-size: 56px;
 }
 .img-painel{
   height: 100%;
-  margin-bottom: -48px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 p{
   font-weight: 200;
   color: #767171;
 }
-#destaque{
-  color: #767171;
+
+#resumo{
+  height: auto;
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.content {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.img-aux{
+  margin-top: -2px;
+  width: 200px;
+}
+.text-resumo{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Google Sans,Helvetica,arial,sans-serif;
+}
+.conteiner-aux2{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.rotate{
+  -ms-transform: rotate(-180deg);
+-webkit-transform: rotate(-180deg);
+-moz-transform: rotate(-180deg);
+-o-transform: rotate(-180deg);
+transform: rotate(-180deg);
+}
+
+#topicos{
+  padding: 40px;
+  padding-top: 180px;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topico{
+  height: 600px;
+  width: 300px;
+}
+.topico > div {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topico > h2 {
+  text-align: center;
 }
 
 ion-thumbnail{
@@ -39,9 +97,24 @@ ion-item{
   --box-shadow: 0px 0px 10px #dadada;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 920px) {
   /* For mobile phones: */
-  #painel {
+  .img-painel {
     display: none;
+  }
+  .text{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  @media only screen and (max-width: 1024px) {
+    /* For mobile phones: */
+    #topicos{
+      flex-direction: column;
+      border-color: #ff4c1d;
+      border-width: 0px;
+      border-bottom-width: 1px;
+      border-style: solid;
+    }
   }
 }
